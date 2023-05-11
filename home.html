@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Tela institucional desenvolvido por Luis Eduardo Vieira-->
+
 <head>
+       <!-- Template e Home desenvovido por Josué Batista de Almeida (Componentes do Template(Header/footer))-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CityWave</title>
+    <link rel="stylesheet" href="https://themes.getbootstrap.com/wp-content/themes/bootstrap-marketplace/style.css?ver=1590611604">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link href="/style.css" rel="stylesheet">  
+    
+
+    <style>
+        body {
+            background-color:rgb(255, 254, 254);
+        }
+
+        footer {
+            background-color: white;
+        }
+    </style>
+     
 </head>
 
 <body>
-    <div style="margin-block-end: 108px;">
+    <div>
         <header>
-            <nav class="navbar bg-body-tertiary fixed-top shadow">
-                <div class="container-fluid">       
-                    <a class="navbar-brand mx-auto" style="font-size: 24px; text-transform: uppercase; letter-spacing: 4px;" href="home.html"> <img src="./img/City wave (2).png" alt="Logo" width="80" height="80 "
+            <nav class="navbar bg-body-tertiary shadow" style="height: 78px;">
+                <div class="container-fluid">
+                    <a class="navbar-brand mx-auto" style="font-size: 22px; font-family: sans-serif; color: #0b0f19; font-weight: 525;
+;
+    letter-spacing: 4px;" href="#"> <img src="./img/City wave (2).png" alt="Logo" width="52px" height="52px"
                             class="d-inline-block align-text-center">CityWave</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
@@ -33,7 +48,7 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a href="home.html" class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -45,10 +60,12 @@
                                         <li><a class="dropdown-item" href="#">Categoria 2</a></li>
                                         <li><a class="dropdown-item" href="#">Categoria 3</a></li>
                                         <li><a class="dropdown-item" href="#">Categoria 4</a></li>
+                                        <li><a class="dropdown-item" href="#">Categoria x</a></li>
+
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Institucional</a>
+                                    <a href="institucional.html" class="nav-link active" aria-current="page" href="#">Institucional</a>
                                 </li>
                             </ul>
                             <form class="d-flex mt-3" role="search">
@@ -58,9 +75,7 @@
                             </form>
                             <div class="d-grid gap-2 mx-auto" style="margin-top: 40px;">
                                 <button class="btn btn-primary shadow" type="button" onclick="window.location.href='signin.html'">Entrar</button>
-                                <button class="btn btn-primary" type="button"
-                                    style="background-color:lightskyblue;" onclick="window.location.href='signup.html'">Criar
-                                    Conta</button>
+                                <button class="btn btn-primary" type="button" style="background-color:lightskyblue;" onclick="window.location.href='signup.html'">Criar Conta</button>
                             </div>
 
                         </div>
@@ -69,41 +84,52 @@
             </nav>
         </header>
     </div>
-    <div class="row featurette" style="margin-inline: 0px; position: relative; height: auto; text-align: center">
-        <div class="fotos">     
-        </div>       
-    </div>
-    <div class="row">
-        <div class="column" >
-            <div id="circulo" ></div>
-            <h6 class="texto">Missões e Valores</h6>
-            <p class="paragrafo" >Lorem ipsum dolor sit amet, .</p>
-        </div> 
-        <div class="column">
-           <div  id="circulo" ></div>
-           <h6 class="texto">Sobre Nos</h6>
-           <p class="paragrafo">Lorem ipsum dolor sit amet, .</p>
-        </div>
-        <div class="column">
-            <div id="circulo" ></div>
-            <h6 class="texto">Politica de Privacidade</h6>
-            <p class="paragrafo">Lorem ipsum dolor sit amet, .</p>
-         </div>
-        <div class="column" >
-            <div id="circulo" ></div>
-            <h6 class="texto">Termos de Serviço</h6>
-            <p class="paragrafo">Lorem ipsum dolor sit amet, .</p>
-        </div>
-      </div>
-      <div class="descripton">
-        <h3> Breve descrição sobre os objetivos da aplicação </h3>
-        <p class="paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-      </div>
 
-    <div class="container-fluid" style="margin-block-start: 108px;">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <main>
+    
+    
+    <section class="container-fluid position-relative px-0 pt-0 mt-3 mt-lg-0">
+        <div class="row g-0">
+          <div class="col-xl-7 col-lg-6 pe-lg-5">
+            <div class="d-flex h-100 pe-xl-4">
+              <video class="w-100" autoplay="" muted="" loop="" style="object-fit: cover;">
+                <source src="./img/1954781869.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6 position-relative py-5">
+            
+            <div class="position-relative zindex-5 text-center text-lg-start px-3 px-lg-0 py-xl-4 py-xxl-5 mt-lg-3 mx-auto mx-lg-0" style="max-width: 530px;">
+              <h2 class="h3 text-primary pb-lg-3">Isso vai explodir sua mente</h2>
+              <h1 class="display-5 pb-lg-3 mb-3">Buscando lugares para se divertir?</h1>
+              <div class="d-flex justify-content-center justify-content-lg-start text-start mb-2">
+                <i class="bx bx-map fs-4 text-primary me-2"></i>
+                <div class="fs-xl" style="font-size: 15px;">Encontre pontos turístico, de lazer ou para se socializar.<br>Eleve sua autoestima através de novas experiências e emoções.</div>
+              </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start py-4 py-lg-5">
+                <a href="quem_sou_eu.html" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-xl-1 mb-3">Entrar</a>
+                <a href="quem_sou_eu.html" class="btn btn-outline-primary btn-lg mb-3">
+                  <i class="bx bx-calendar-check fs-xl me-2 ms-n1" ></i>
+                  Criar Conta
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </section>
+       
+              
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    <div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
             <div class="col-md-4 d-flex align-items-center" style="margin: 25px;">
-                <a href="home.html" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                     <img src="./img/City wave (2).png" class="bi" width="80" height="80">
 
 
@@ -114,7 +140,7 @@
                     </font>
                 </span>
             </div>
-
+            <div style="display: contents;">
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="margin: 50px;">
                 <li class="ms-3"><a class="text-body-secondary" href="#"> <img src="./img/iconSpotify (2).svg" class="bi"
                             width="24" height="24">
@@ -126,6 +152,7 @@
                             width="24" height="24">
                     </a></li>
             </ul>
+            </div>
         </footer>
     </div>
 
