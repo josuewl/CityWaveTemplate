@@ -15,7 +15,8 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-main {
+
+#siginMain {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -26,7 +27,7 @@ main {
   justify-content: center;
 }
 
-.box {
+.sigin{
   position: relative;
   width: 100%;
   justify-content: center;
@@ -58,7 +59,7 @@ main {
   transition: 0.8s ease-in-out;
 }
 
-form {
+#formsignin {
   max-width: 260px;
   width: 100%;
   margin: 0 auto;
