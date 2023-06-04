@@ -135,7 +135,7 @@
 
             <div class="col-lg-7 h-auto mb-30">
                 <div class="h-100 bg-light p-30">
-                    <h3>Udon Culinária Japonesa</h3>
+                    <h3><span id="titulo"></span></h3>
                     <div class="d-flex mb-3">
                         <div class="text-primary mr-2">
                             <small class="fas fa-star"></small>
@@ -146,7 +146,7 @@
                         </div>
                         <small class="pt-1">(99 Avaliações)</small>
                     </div>
-                    <h3 class="font-weight-semi-bold mb-4">O japonês mais premiado de Belo Horizonte.</h3>
+                    <h3 class="font-weight-semi-bold mb-4"><span id="subTitulo"></span></h3>
 
                     <p class="mb-4">Em um ambiente sofisticado, nós apresentamos o Udon como um espaço que concilia da
                         tradicional à moderna cozinha nipônica.</p>
@@ -269,7 +269,17 @@
         </div>
     </div>
     <!-- Shop Detail End -->
-
+    <script>
+        //Obtém os dados do localStorage
+        const titulo = localStorage.getItem("titulo");
+        const subTitulo = localStorage.getItem("subTitulo");
+        const descricaoPrevia = localStorage.getItem("descricaoPrevia");
+        //Exibe os dados na página
+        document.getElementById("titulo").textContent = titulo;
+        document.getElementById("subTitulo").textContent = subTitulo;
+        document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
+        
+    </script>
   
     <footer class="footer pb-4 border-top shadow">
         <div class="container">
