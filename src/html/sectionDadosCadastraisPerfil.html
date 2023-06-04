@@ -142,12 +142,12 @@
                     <div class="mb-3">
                       <label for="titulo" class="form-label">Nome do Estabelecimento</label>
                       <input type="text" id="titulo" class="form-control" aria-describedby="emailHelp"><span id="titulo"></span></input>
-                      <div id="emailHelp" class="form-text">Este será seu nome na página principal</div>
+                      <div class="form-text">Este será seu nome na página principal</div>
                     </div>
                     <div class="mb-3">
                       <label for="subTitulo" class="form-label">Slogan ou Subtítulo</label>
                       <input type="text" id="subTitulo" class="form-control" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">Este campo aparecerá na página principal</div>
+                      <div class="form-text">Este campo aparecerá na página principal</div>
                     </div>
                     <div class="mb-3">
                       <label for="descricaoPrevia" class="form-label">Descrição Prévia</label>
@@ -157,12 +157,12 @@
                     <div class="mb-3">
                       <label for="enderecoEstabelecimento" class="form-label">Endereço do Estabelecimento</label>
                       <input type="text" class="form-control" id="enderecoEstabelecimento" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">Este endereço aparecera para o usuario</div>
+                      <div class="form-text">Este endereço aparecera para o usuario</div>
                     </div>
                     <div class="mb-3">
                       <label for="Telefone" class="form-label">Telefone</label>
-                      <input type="tel" class="form-control" id="telfoneEstabelecimento" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">Ex: 11 99855-4165</div>
+                      <input id="telfoneEstabelecimento" type="tel" class="form-control" aria-describedby="emailHelp">
+                      <div class="form-text">Ex: 11 99855-4165</div>
                     </div>
                     <button type="submit" class="btn btn-primary" onclick="carregarDadosSalvos();">Salvar</button>
                   </form>
@@ -184,11 +184,17 @@
       const titulo = document.getElementById("titulo").value;
       const subTitulo = document.getElementById("subTitulo").value;
       const descricaoPrevia = document.getElementById("descricaoPrevia").value;
-      
+      const enderecoEstabelecimento = document.getElementById("enderecoEstabelecimento").value;
+      const telfoneEstabelecimento = document.getElementById("telfoneEstabelecimento").value;
+
+     
       //Armazena os dados no localStorage
       localStorage.setItem("titulo", titulo);
       localStorage.setItem("subTitulo", subTitulo);
       localStorage.setItem("descricaoPrevia", descricaoPrevia);
+      localStorage.setItem("enderecoEstabelecimento", enderecoEstabelecimento);
+      localStorage.setItem("telfoneEstabelecimento", telfoneEstabelecimento);
+
 
     })
        
@@ -196,13 +202,19 @@
       const titulo = localStorage.getItem("titulo");
       const descricaoPrevia = localStorage.getItem("descricaoPrevia");
       const subTitulo = localStorage.getItem("subTitulo");
+      const enderecoEstabelecimento = localStorage.getItem("enderecoEstabelecimento");
+      const telfoneEstabelecimento = localStorage.getItem("telfoneEstabelecimento");
+
 
       //Verifica se os dados existem no localStorage
-      if (titulo || descricaoPrevia || subTitulo) {
+      if (titulo || descricaoPrevia || subTitulo || enderecoEstabelecimento || telfoneEstabelecimento) {
       //Preenche os campos de entrada com os dados salvos
         document.getElementById("titulo").value = titulo;
         document.getElementById("descricaoPrevia").value = descricaoPrevia;
         document.getElementById("subTitulo").value = subTitulo;
+        document.getElementById("enderecoEstabelecimento").value = enderecoEstabelecimento;
+        document.getElementById("telfoneEstabelecimento").value = telfoneEstabelecimento;
+
       }
   </script>
 
