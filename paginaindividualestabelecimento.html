@@ -198,18 +198,10 @@
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="tab-pane-1">
                             <h4 class="mb-3">Esta é uma experiência Udon</h4>
-                            <p>Em um ambiente sofisticado, nós apresentamos o Udon como um espaço que concilia da tradicional à moderna cozinha nipônica. Nosso restaurante foi inaugurado em 2008 e atualmente é uma das principais referências da Culinária Japonesa em Belo Horizonte.
-
-                                A cozinha, comandada pelo chef Marcelo San, prepara uma grande variedade de pratos, com entradas, combinados, temakis, ceviches especiais, variedades de Yakisoba, Teppanyaki e também grelhados feitos na Robata.
-                                
-                                Para a entrada, há excelentes opções como o Tartar de Atum (com tempura de shisô, molho ponzu e creme de wasabi) e o Salmão citric (dez lâminas de salmão servidas com suco de limão, suco de laranja, azeite e redução de balsâmico).
-                                
-                                Também se destacam, entre os pratos, os Dyos Especiais, como o Foie gras brulê (sushi de foie gras e brunoise de manga com molho teriyaki), o Udon (massa Udon servida ao leve curry e coco com frutos do mar grelhados), o Tempura Udon especial de camarão com coco ao molho de caipirinha e o Salmão Agridoce (com shiitake nirá ao molho de laranja) e a Chaufa uma mistura de arroz picante salteado com polvo, camarões, vegetais e ovo caipira.
-                                
+                            <p> <span id="descricaoEstabelecimento"></span>
                                 
                             </p>
-                            <p>Fazemos um convite para vivenciar o conceito izakaya: em nossa bancada inspirada na cultura japonesa, acompanhe de perto a magia acontecendo!
-                            </p>
+                    
                         </div>
                         <div class="tab-pane fade" id="tab-pane-2">
                             <h4 class="mb-3">Additional Information</h4>
@@ -270,6 +262,7 @@
         const descricaoPrevia = localStorage.getItem("descricaoPrevia");
         const enderecoEstabelecimento = localStorage.getItem("enderecoEstabelecimento");
         const telefoneEstabelecimento = localStorage.getItem("telefoneEstabelecimento");
+        const descricaoEstabelecimento = localStorage.getItem("descricaoEstabelecimento");
 
         //Exibe os dados na página
         document.getElementById("titulo").textContent = titulo;
@@ -277,6 +270,7 @@
         document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
         document.getElementById("enderecoEstabelecimento").textContent = enderecoEstabelecimento;
         document.getElementById("telefoneEstabelecimento").textContent = telefoneEstabelecimento;
+        document.getElementById("descricaoEstabelecimento").textContent = descricaoEstabelecimento;
 
     </script>
   
