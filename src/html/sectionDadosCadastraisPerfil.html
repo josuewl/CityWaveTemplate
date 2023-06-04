@@ -161,10 +161,10 @@
                     </div>
                     <div class="mb-3">
                       <label for="Telefone" class="form-label">Telefone</label>
-                      <input id="telfoneEstabelecimento" type="tel" class="form-control" aria-describedby="emailHelp">
+                      <input id="telefoneEstabelecimento" type="tel" class="form-control" aria-describedby="emailHelp">
                       <div class="form-text">Ex: 11 99855-4165</div>
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="carregarDadosSalvos();">Salvar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
                   </form>
                   <!--Fim Formulario-->
                 </div>
@@ -185,7 +185,7 @@
       const subTitulo = document.getElementById("subTitulo").value;
       const descricaoPrevia = document.getElementById("descricaoPrevia").value;
       const enderecoEstabelecimento = document.getElementById("enderecoEstabelecimento").value;
-      const telfoneEstabelecimento = document.getElementById("telfoneEstabelecimento").value;
+      const telefoneEstabelecimento = document.getElementById("telefoneEstabelecimento").value;
 
      
       //Armazena os dados no localStorage
@@ -193,7 +193,7 @@
       localStorage.setItem("subTitulo", subTitulo);
       localStorage.setItem("descricaoPrevia", descricaoPrevia);
       localStorage.setItem("enderecoEstabelecimento", enderecoEstabelecimento);
-      localStorage.setItem("telfoneEstabelecimento", telfoneEstabelecimento);
+      localStorage.setItem("telefoneEstabelecimento", telefoneEstabelecimento);
 
 
     })
@@ -203,17 +203,17 @@
       const descricaoPrevia = localStorage.getItem("descricaoPrevia");
       const subTitulo = localStorage.getItem("subTitulo");
       const enderecoEstabelecimento = localStorage.getItem("enderecoEstabelecimento");
-      const telfoneEstabelecimento = localStorage.getItem("telfoneEstabelecimento");
+      const telefoneEstabelecimento = localStorage.getItem("telefoneEstabelecimento");
 
 
       //Verifica se os dados existem no localStorage
-      if (titulo || descricaoPrevia || subTitulo || enderecoEstabelecimento || telfoneEstabelecimento) {
+      if (titulo || descricaoPrevia || subTitulo || enderecoEstabelecimento || telefoneEstabelecimento) {
       //Preenche os campos de entrada com os dados salvos
         document.getElementById("titulo").value = titulo;
         document.getElementById("descricaoPrevia").value = descricaoPrevia;
         document.getElementById("subTitulo").value = subTitulo;
         document.getElementById("enderecoEstabelecimento").value = enderecoEstabelecimento;
-        document.getElementById("telfoneEstabelecimento").value = telfoneEstabelecimento;
+        document.getElementById("telefoneEstabelecimento").value = telefoneEstabelecimento;
 
       }
   </script>
