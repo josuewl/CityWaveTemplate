@@ -137,34 +137,36 @@
               <h5 class="card-title fw-semibold mb-4">Dados Cadastrais</h5>
               <div class="card">
                 <div class="card-body">
-                  <form>
+                  <!--Formulario-->
+                  <form id="formularioEstabelecimento">
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Nome do Estabelecimento</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label for="titulo" class="form-label">Nome do Estabelecimento</label>
+                      <input type="text" id="titulo" class="form-control" aria-describedby="emailHelp">
                       <div id="emailHelp" class="form-text">Este será seu nome na página principal</div>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Slogan ou Subtítulo</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label for="subTitulo" class="form-label">Slogan ou Subtítulo</label>
+                      <input type="text" id="subTitulo" class="form-control" aria-describedby="emailHelp">
                       <div id="emailHelp" class="form-text">Este campo aparecerá na página principal</div>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label">Descrição Prévia</label>
-                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <label for="descricaoPrevia" class="form-label">Descrição Prévia</label>
+                       <textarea class="form-control" id="descricaoPrevia" rows="3"></textarea>
                       <div id="exampleFormControlTextarea1" class="form-text">Este campo aparecerá na página principal</div>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Endereço do Estabelecimento</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label for="enderecoEstabelecimento" class="form-label">Endereço do Estabelecimento</label>
+                      <input type="text" class="form-control" id="enderecoEstabelecimento" aria-describedby="emailHelp">
                       <div id="emailHelp" class="form-text">Este endereço aparecera para o usuario</div>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Telefone</label>
-                      <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label for="Telefone" class="form-label">Telefone</label>
+                      <input type="tel" class="form-control" id="telfoneEstabelecimento" aria-describedby="emailHelp">
                       <div id="emailHelp" class="form-text">Ex: 11 99855-4165</div>
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>
                   </form>
+                  <!--Fim Formulario-->
                 </div>
               </div>
               
@@ -174,6 +176,24 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.getElementById("formularioEstabelecimento").addEventListener("submit", function(event){
+      event.preventDefault(); //Evita que o formulário seja enviado
+
+      var titulo = document.getElementById("titulo").value;
+      var subTitulo = document.getElementById("subTitulo").value;
+      let descricaoPrevia = document.getElementById("descricaoPrevia").value;
+      
+      //Armazena os dados nomlocalStorage
+      localStorage.setItem("titulo", titulo);
+      localStorage.setItem("subTitulo", subTitulo);
+      localStorage.setItem("descricaoPrevia", descricaoPrevia);
+
+    })
+  </script>
+
+
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/sidebarmenu.js"></script>
