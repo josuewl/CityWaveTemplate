@@ -102,7 +102,7 @@
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
-                            <div class="position-relative">
+                            <div class="cardPrincipal position-relative">
                                 <img class="img-fluid" src="img/udonfachada.jpg" alt="">
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Aberto</small>
                             </div>
@@ -208,6 +208,19 @@
             document.getElementById("titulo").textContent = titulo;
             document.getElementById("titulo").textContent = titulo;
             document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
+
+            // Verifica se há uma imagem carregada no localStorage e a exibe se existir
+        const uploadedImage = localStorage.getItem('uploadedImage');
+        if (uploadedImage) {
+            const newImage = document.createElement('img');
+            newImage.className = 'cardPrincipal';
+            newImage.src = 'data:image;base64,' + uploadedImage;
+            newImage.alt = 'Image';
+
+            const card = document.querySelector('.cardPrincipal');
+            card.innerHTML = '';
+            card.appendChild(newImage);
+        }
             
         </script>
         <div>

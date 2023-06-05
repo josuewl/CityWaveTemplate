@@ -134,22 +134,26 @@
                 <div class="col-md-4">
                   <h5 class="card-title fw-semibold mb-4">Card List</h5>
                   <div class="card">
-                    <img src="../assets/images/profile/nossobar.jpg" class="card-img-top" alt="...">
+                    <div class="cardImagemPrincipal">
+                    <img id="cardImagemPrincipal" class="card-img-top" src="../assets/images/profile/nossobar.jpg"  alt="Imagem">
+                   </div>
                     <div class="card-body">
                       <h5 class="card-title">Card Principal</h5>
                       <p class="card-text"></p>
-                      <a href="#" type="file"class="btn btn-primary">Alterar Imagem</a>
+                     <button id="addImagemCardPrincipal" class="btn btn-primary">Alterar Imagem</button>
                     </div>
                   </div>
+                
                 </div>
                 <div class="col-md-4">
-                  <h5 class="card-title fw-semibold mb-4">Imagem de Apresentação</h5>
+                  <h5 class="card-title fw-semibold mb-4">Banner 1</h5>
                   <div class="card">
-                   <img src="../assets/images/profile/nossobar.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Imagem 1</h5>
+                    <div class="imagemBanner1">
+                      <img class="card-img-top" src="../assets/images/profile/nossobar.jpg"  alt="Imagem">
+                     </div>                    <div class="card-body">
+                      <h5 class="card-title">Banner 1</h5>
                       <p class="card-text"></p>
-                      <a href="#" type="file"class="btn btn-primary">Alterar Imagem</a>
+                      <button id="addImagem1" class="btn btn-primary">Alterar Imagem</button>
                     </div>
                   </div>
                 </div>
@@ -204,6 +208,134 @@
       </div>
     </div>
   </div>
+  <script>
+    //Card Principal
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleciona o botão "Adicionar fotos"
+        const addImagemCardPrincipal = document.getElementById('addImagemCardPrincipal');
+
+        // Adiciona um ouvinte de eventos de clique no botão
+        addImagemCardPrincipal.addEventListener('click', function () {
+            // Cria um elemento de input do tipo "file"
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+
+            // Adiciona um ouvinte de eventos para quando um arquivo é selecionado
+            fileInput.addEventListener('change', function () {
+                // Verifica se um arquivo foi selecionado
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    const reader = new FileReader();
+
+                    // O evento onload é acionado quando a leitura do arquivo é concluída
+                    reader.onload = function (e) {
+                        // Cria uma nova imagem com a imagem carregada
+                        const imagemCardPrincipal = document.createElement('img');
+                              imagemCardPrincipal.className = 'card-img-top';
+                              imagemCardPrincipal.src = e.target.result;
+                              imagemCardPrincipal.alt = 'Image';
+
+                    
+
+                        // Obtém a div da imagem
+                        const cardImagemPrincipal = document.querySelector('.cardImagemPrincipal');
+
+                        // Substitui a imagem existente pela nova imagem
+                        cardImagemPrincipal.innerHTML = '';
+                        cardImagemPrincipal.appendChild(imagemCardPrincipal);
+
+                        // Salva a imagem no localStorage como uma string base64
+                        const base64Image = e.target.result.split(',')[1];
+                        localStorage.setItem('uploadedImage', base64Image);
+                    };
+
+                    // Lê o arquivo como uma URL de dados
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Aciona o clique no elemento de input do tipo "file"
+            fileInput.click();
+        });
+
+        // Verifica se há uma imagem carregada no localStorage e a exibe se existir
+        const uploadedImage = localStorage.getItem('uploadedImage');
+        if (uploadedImage) {
+            const imagemCardPrincipal = document.createElement('img');
+            imagemCardPrincipal.className = 'card-img-top';
+            imagemCardPrincipal.src = 'data:image;base64,' + uploadedImage;
+            imagemCardPrincipal.alt = 'Image';
+
+            const cardImagemPrincipal = document.querySelector('.cardImagemPrincipal');
+            cardImagemPrincipal.innerHTML = '';
+            cardImagemPrincipal.appendChild(imagemCardPrincipal);
+        }
+    });
+     
+    //Banner 1
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleciona o botão "Adicionar fotos"
+        const addImagem1 = document.getElementById('addImagem1');
+        
+        // Adiciona um ouvinte de eventos de clique no botão
+        addImagem1.addEventListener('click', function () {
+            // Cria um elemento de input do tipo "file"
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+
+            // Adiciona um ouvinte de eventos para quando um arquivo é selecionado
+            fileInput.addEventListener('change', function () {
+                // Verifica se um arquivo foi selecionado
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    const reader = new FileReader();
+
+                    // O evento onload é acionado quando a leitura do arquivo é concluída
+                    reader.onload = function (e) {
+                        // Cria uma nova imagem com a imagem carregada
+                        const imagemBanner1 = document.createElement('img');
+                              imagemBanner1.className = 'card-img-top';
+                              imagemBanner1.src = e.target.result;
+                              imagemBanner1.alt = 'Image';
+
+                    
+
+                        // Obtém a div da imagem
+                        const divImagemBanner1 = document.querySelector('.imagemBanner1');
+
+                        // Substitui a imagem existente pela nova imagem
+                        divImagemBanner1.innerHTML = '';
+                        divImagemBanner1.appendChild(imagemBanner1);
+
+                        // Salva a imagem no localStorage como uma string base64
+                        const base64Image = e.target.result.split(',')[1];
+                        localStorage.setItem('uploadimagemBanner1', base64Image);
+                    };
+
+                    // Lê o arquivo como uma URL de dados
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Aciona o clique no elemento de input do tipo "file"
+            fileInput.click();
+        });
+
+        // Verifica se há uma imagem carregada no localStorage e a exibe se existir
+        const uploadimagemBanner1 = localStorage.getItem('uploadimagemBanner1');
+        if (uploadimagemBanner1) {
+            const imagemBanner1 = document.createElement('img');
+            imagemBanner1.className = 'card-img-top';
+            imagemBanner1.src = 'data:image;base64,' + uploadimagemBanner1;
+            imagemBanner1.alt = 'Image';
+
+            const recebedivImagemBanner1 = document.querySelector('.imagemBanner1');
+            recebedivImagemBanner1.innerHTML = '';
+            recebedivImagemBanner1.appendChild(imagemBanner1);
+        }
+    });
+  </script>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/sidebarmenu.js"></script>
