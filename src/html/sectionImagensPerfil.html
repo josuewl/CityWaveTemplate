@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modernize Free</title>
+  <title>Meu Perfil City Wave</title>
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
   <!-- Icon Font Stylesheet -->
@@ -134,11 +134,11 @@
                 <div class="col-md-4">
                   <h5 class="card-title fw-semibold mb-4">Card List</h5>
                   <div class="card">
-                    <div class="cardImagemPrincipal">
-                    <img id="cardImagemPrincipal" class="card-img-top" src="../assets/images/profile/nossobar.jpg"  alt="Imagem">
-                   </div>
+                    <div class="imagemCardPrincipal">
+                    <img id="cardImagemPrincipal" class="imagemCardPrincipal card-img-top" src="/img/placeholderCityWave.svg"  alt="Imagem">
+                    </div>
                     <div class="card-body">
-                      <h5 class="card-title">Card Principal</h5>
+                      <h5 class="card-title">Banner Card</h5>
                       <p class="card-text"></p>
                      <button id="addImagemCardPrincipal" class="btn btn-primary">Alterar Imagem</button>
                     </div>
@@ -146,10 +146,10 @@
                 
                 </div>
                 <div class="col-md-4">
-                  <h5 class="card-title fw-semibold mb-4">Banner 1</h5>
+                  <h5 class="card-title fw-semibold mb-4">Banner Carousel</h5>
                   <div class="card">
                     <div class="imagemBanner1">
-                      <img class="card-img-top" src="../assets/images/profile/nossobar.jpg"  alt="Imagem">
+                      <img class="card-img-top" src="/img/placeholderCityWave.svg"  alt="Imagem">
                      </div>                    <div class="card-body">
                       <h5 class="card-title">Banner 1</h5>
                       <p class="card-text"></p>
@@ -158,44 +158,46 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <h5 class="card-title fw-semibold mb-4">Imagem de Apresentação</h5>
+                  <h5 class="card-title fw-semibold mb-4">Banner Carousel</h5>
                   <div class="card">
-                   <img src="../assets/images/profile/nossobar.jpg" class="card-img-top" alt="...">
+                    <div class="imagemBanner2">
+                      <img class="card-img-top" src="/img/placeholderCityWave.svg"  alt="Imagem">
+                     </div>
+                     <div class="card-body">
+                      <h5 class="card-title">Banner 2</h5>
+                      <p class="card-text"></p>
+                      <button id="addImagem2" class="btn btn-primary">Alterar Imagem</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5 class="card-title fw-semibold mb-4">Banner Carousel</h5>
+                  <div class="card">
+                   <img src="/img/placeholderCityWave.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Imagem 2</h5>
+                      <h5 class="card-title">Banner 3</h5>
                       <p class="card-text"></p>
                       <a href="#" type="file"class="btn btn-primary">Alterar Imagem</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <h5 class="card-title fw-semibold mb-4">Imagem de Apresentação</h5>
+                  <h5 class="card-title fw-semibold mb-4">Banner Carousel</h5>
                   <div class="card">
-                   <img src="../assets/images/profile/nossobar.jpg" class="card-img-top" alt="...">
+                   <img src="/img/placeholderCityWave.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Imagem 3</h5>
+                      <h5 class="card-title">Banner 4</h5>
                       <p class="card-text"></p>
                       <a href="#" type="file"class="btn btn-primary">Alterar Imagem</a>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <h5 class="card-title fw-semibold mb-4">Imagem de Apresentação</h5>
+                  <h5 class="card-title fw-semibold mb-4">Banner Carousel</h5>
                   <div class="card">
-                   <img src="../assets/images/profile/nossobar.jpg" class="card-img-top" alt="...">
+                   <img src="/img/placeholderCityWave.svg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Imagem 4</h5>
-                      <p class="card-text"></p>
-                      <a href="#" type="file"class="btn btn-primary">Alterar Imagem</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <h5 class="card-title fw-semibold mb-4">Imagem de Apresentação</h5>
-                  <div class="card">
-                   <img src="../assets/images/profile/nossobar.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Imagem 5</h5>
+                      <h5 class="card-title">Banner 5</h5>
                       <p class="card-text"></p>
                       <a href="#" type="file"class="btn btn-primary">Alterar Imagem</a>
                     </div>
@@ -209,6 +211,11 @@
     </div>
   </div>
   <script>
+
+
+
+
+
     //Card Principal
     document.addEventListener('DOMContentLoaded', function() {
         // Seleciona o botão "Adicionar fotos"
@@ -238,7 +245,7 @@
                     
 
                         // Obtém a div da imagem
-                        const cardImagemPrincipal = document.querySelector('.cardImagemPrincipal');
+                        const cardImagemPrincipal = document.querySelector('.imagemCardPrincipal');
 
                         // Substitui a imagem existente pela nova imagem
                         cardImagemPrincipal.innerHTML = '';
@@ -258,6 +265,7 @@
             fileInput.click();
         });
 
+      
         // Verifica se há uma imagem carregada no localStorage e a exibe se existir
         const uploadedImage = localStorage.getItem('uploadedImage');
         if (uploadedImage) {
@@ -266,12 +274,12 @@
             imagemCardPrincipal.src = 'data:image;base64,' + uploadedImage;
             imagemCardPrincipal.alt = 'Image';
 
-            const cardImagemPrincipal = document.querySelector('.cardImagemPrincipal');
+            const cardImagemPrincipal = document.querySelector('.imagemCardPrincipal');
             cardImagemPrincipal.innerHTML = '';
             cardImagemPrincipal.appendChild(imagemCardPrincipal);
         }
     });
-     
+  
     //Banner 1
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -333,6 +341,71 @@
             const recebedivImagemBanner1 = document.querySelector('.imagemBanner1');
             recebedivImagemBanner1.innerHTML = '';
             recebedivImagemBanner1.appendChild(imagemBanner1);
+        }
+    });
+
+    
+    //Banner 2
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleciona o botão "Adicionar fotos"
+        const addImagem2 = document.getElementById('addImagem2');
+
+        // Adiciona um ouvinte de eventos de clique no botão
+        addImagem2.addEventListener('click', function () {
+            // Cria um elemento de input do tipo "file"
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+
+            // Adiciona um ouvinte de eventos para quando um arquivo é selecionado
+            fileInput.addEventListener('change', function () {
+                // Verifica se um arquivo foi selecionado
+                if (fileInput.files.length > 0) {
+                    const file = fileInput.files[0];
+                    const reader = new FileReader();
+
+                    // O evento onload é acionado quando a leitura do arquivo é concluída
+                    reader.onload = function (e) {
+                        // Cria uma nova imagem com a imagem carregada
+                        const imagemBanner2 = document.createElement('img');
+                              imagemBanner2.className = 'card-img-top';
+                              imagemBanner2.src = e.target.result;
+                              imagemBanner2.alt = 'Image';
+
+                    
+
+                        // Obtém a div da imagem
+                        const divImagemBanner2 = document.querySelector('.imagemBanner2');
+
+                        // Substitui a imagem existente pela nova imagem
+                        divImagemBanner2.innerHTML = '';
+                        divImagemBanner2.appendChild(imagemBanner2);
+
+                        // Salva a imagem no localStorage como uma string base64
+                        const base64Image = e.target.result.split(',')[1];
+                        localStorage.setItem('uploadimagemBanner2', base64Image);
+                    };
+
+                    // Lê o arquivo como uma URL de dados
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Aciona o clique no elemento de input do tipo "file"
+            fileInput.click();
+        });
+
+      
+        // Verifica se há uma imagem carregada no localStorage e a exibe se existir
+        const uploadimagemBanner2 = localStorage.getItem('uploadimagemBanner2');
+        if (uploadimagemBanner2) {
+          const imagemBanner2 = document.createElement('img');
+            imagemBanner2.className = 'card-img-top';
+            imagemBanner2.src = 'data:image;base64,' + uploadimagemBanner2;
+            imagemBanner2.alt = 'Image';
+
+            const recebedivImagemBanner1 = document.querySelector('.imagemBanner2');
+            recebedivImagemBanner1.innerHTML = '';
+            recebedivImagemBanner1.appendChild(imagemBanner2);
         }
     });
   </script>
