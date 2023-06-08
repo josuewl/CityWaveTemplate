@@ -13,7 +13,7 @@
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "tabler-icons";
-    src: url("fonts/tabler-icons.svg#tabler-icons") format("svg");
+    src: url("../css/tabler-icons/tabler-icons.svg#tabler-icons") format("svg");
   }
 }
 
