@@ -120,9 +120,9 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <small class="border-end me-3 pe-3"><i class="bi bi-music-note-beamed text-primary me-2"></i>Música</small>
-                                    <small class="border-end me-3 pe-3"><i class=" text-primary me-2"></i>Japonesa</small>
-                                    <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                                    <small class="border-end me-3 pe-3"><i class=" text-primary me-2"></i><span id="categoriaPrincipal"></span></small>
+                                    <small class="border-end me-3 pe-3"><i class=" text-primary me-2"></i><span id="subCategoria1"></span></small>
+                                    <small><i class="text-primary me-2"></i><span id="subCategoria2"></span></small>
                                 </div>
                                  <!--Descrição Previa recebido pelo painel dashboard utilizando o localstorage e manipulação do DOM-->
                                 <p class="text-body mb-3"><span id="descricaoPrevia"></span></p>
@@ -203,10 +203,16 @@
             //Obtém os dados do localStorage
             const titulo = localStorage.getItem("titulo");
             const subTitulo = localStorage.getItem("subTitulo");
+            const categoriaPrincipal = localStorage.getItem("categoriaPrincipal");
+            const subCategoria1 = localStorage.getItem("subCategoria1");
+            const subCategoria2 = localStorage.getItem("subCategoria2");
             const descricaoPrevia = localStorage.getItem("descricaoPrevia");
             //Exibe os dados na página
             document.getElementById("titulo").textContent = titulo;
-            document.getElementById("titulo").textContent = titulo;
+            document.getElementById("categoriaPrincipal").textContent = categoriaPrincipal;
+            document.getElementById("subCategoria1").textContent = subCategoria1;
+            document.getElementById("subCategoria2").textContent = subCategoria2;
+
             document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
 
             // Verifica se há uma imagem carregada no localStorage e a exibe se existir
@@ -259,8 +265,8 @@
                         <div class="col-12 col-md-6">
                             <nav class="nav nav-footer justify-content-center justify-content-md-end">
                                 <a class="nav-link active ps-0 " href="../index.html" target="_blank">Home</a>
-                                <a class="nav-link " href="/html/institucional.html" target="_blank">Institucional</a>
-                                <a class="nav-link " href="/html/institucional.html" target="_blank">Nossas Politicas</a>
+                                <a class="nav-link " href="institucional.html" target="_blank">Institucional</a>
+                                <a class="nav-link " href="institucional.html" target="_blank">Nossas Politicas</a>
             
                             </nav>
                         </div>
