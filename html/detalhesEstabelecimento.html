@@ -262,7 +262,9 @@
             if (!descricaoEstabelecimento) {
                 const descricaoEstabelecimentoPadrao = "Em um ambiente sofisticado, nós apresentamos o Udon como um espaço que concilia da tradicional à moderna cozinha nipônica. Nosso restaurante foi inaugurado em 2008 e atualmente é uma das principais referências da Culinária Japonesa em Belo Horizonte. A cozinha, comandada pelo chef Marcelo San, prepara uma grande variedade de pratos, com entradas, combinados, temakis, ceviches especiais, variedades de Yakisoba, Teppanyaki e também grelhados feitos na Robata.";
                 document.getElementById("descricaoEstabelecimento").textContent = descricaoEstabelecimentoPadrao;
-            } else {
+            } 
+            
+            if (titulo && subTitulo && descricaoPrevia && enderecoEstabelecimento && telefoneEstabelecimento && descricaoEstabelecimento) {
                 // Exibe os dados na página
                   document.getElementById("elementoTitulo").textContent = titulo;
                   document.getElementById("subTitulo").textContent = subTitulo;

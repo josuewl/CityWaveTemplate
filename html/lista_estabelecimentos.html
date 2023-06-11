@@ -237,7 +237,8 @@
             if (!descricaoPrevia) {
                 const descricaoPreviaPadrao = "Trouxemos para Belo Horizonte um cardápio de vanguarda, com uma cozinha fusion, misturando sabores, culturas e técnicas, com decoração arrojada. Mais que um japonês, o Udon é uma experiência única!";
                 document.getElementById("descricaoPrevia").textContent = descricaoPreviaPadrao;
-            } else {
+            } 
+            if (titulo && categoriaPrincipal && subCategoria1 && subCategoria2 && descricaoPrevia) {
                 // Exibe os dados na página
                   document.getElementById("elementoTitulo").textContent = titulo;
                   document.getElementById("categoriaPrincipal").textContent = categoriaPrincipal;
