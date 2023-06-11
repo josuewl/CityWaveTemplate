@@ -112,7 +112,7 @@
                             <div class="p-4 mt-2" id="card">
                                 <div class="d-flex justify-content-between mb-3">
                                     <!--Titulo Card recebido pelo painel dashboard utilizando o localstorage e manipulação do DOM-->
-                                    <h5 class="mb-0"><span id="titulo">Amarelo</span></h5>
+                                    <h5 class="mb-0" id="elementoTitulo">Undon Culinaria</h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -210,7 +210,7 @@
             const subCategoria2 = localStorage.getItem("subCategoria2");
             const descricaoPrevia = localStorage.getItem("descricaoPrevia");
             //Exibe os dados na página
-            document.getElementById("titulo").textContent = titulo;
+            document.getElementById("elementoTitulo").textContent = titulo;
             document.getElementById("categoriaPrincipal").textContent = categoriaPrincipal;
             document.getElementById("subCategoria1").textContent = subCategoria1;
             document.getElementById("subCategoria2").textContent = subCategoria2;
