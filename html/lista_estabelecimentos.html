@@ -102,18 +102,17 @@
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
-                            <div class="imagemCardPrincipal position-relative">
+                            <div class="position-relative">
+                                <div class="imagemCardPrincipal">
                                 <img class="img-fluid" src="../img/udonfachada.jpg" alt="">
+                                </div>
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Aberto</small>
                             </div>
                             <!--Card-->
                             <div class="p-4 mt-2" id="card">
                                 <div class="d-flex justify-content-between mb-3">
                                     <!--Titulo Card recebido pelo painel dashboard utilizando o localstorage e manipulação do DOM-->
-                                    <div class="tituloCardPrincipal">
-                                    <h5 class="mb-0" id="elementoTitulo">Undon Culinaria</h5>
-                                    </div>
-                                    
+                                    <h5 class="mb-0"><span id="titulo">Amarelo</span></h5>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -205,10 +204,6 @@
         <script>
             //Obtém os dados do localStorage
             const titulo = localStorage.getItem("titulo");
-
-            const elementoTitulo = document.getElementById('elementoTitulo');
-            elementoTitulo.textContent = titulo
-
             const subTitulo = localStorage.getItem("subTitulo");
             const categoriaPrincipal = localStorage.getItem("categoriaPrincipal");
             const subCategoria1 = localStorage.getItem("subCategoria1");
@@ -222,7 +217,19 @@
 
             document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
 
-        
+            // Verifica se há uma imagem carregada no localStorage e a exibe se existir
+        const uploadedImage = localStorage.getItem('uploadedImage');
+        if (uploadedImage) {
+            const newImage = document.createElement('img');
+            newImage.className = 'imagemCardPrincipal';
+            newImage.src = 'data:image;base64,' + uploadedImage;
+            newImage.alt = 'Image';
+
+            const card = document.querySelector('.imagemCardPrincipal');
+            card.innerHTML = '';
+            card.appendChild(newImage);
+        }
+            
         </script>
         <div>
             <footer class="footer pb-4 border-top shadow" style="margin-top: 100px;">
