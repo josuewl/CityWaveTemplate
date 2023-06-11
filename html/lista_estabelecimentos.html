@@ -112,7 +112,9 @@
                             <div class="p-4 mt-2" id="card">
                                 <div class="d-flex justify-content-between mb-3">
                                     <!--Titulo Card recebido pelo painel dashboard utilizando o localstorage e manipulação do DOM-->
+                                    <div class="elementoTitulo">
                                     <h5 class="mb-0" id="elementoTitulo">Undon Culinaria</h5>
+                                    </div>
                                     <div class="ps-2">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -122,9 +124,9 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mb-3">
-                                    <small class="border-end me-3 pe-3"><i class=" text-primary me-2"></i><span id="categoriaPrincipal"></span></small>
-                                    <small class="border-end me-3 pe-3"><i class=" text-primary me-2"></i><span id="subCategoria1"></span></small>
-                                    <small><i class="text-primary me-2"></i><span id="subCategoria2"></span></small>
+                                    <small class="border-end me-3 pe-3" id="categoriaPrincipal"><i class=" text-primary me-2"></i></small>
+                                    <small class="border-end me-3 pe-3" id="subCategoria1" ><i class=" text-primary me-2"></i></small>
+                                    <small id="subCategoria2"><i class="text-primary me-2"></i></small>
                                 </div>
                                  <!--Descrição Previa recebido pelo painel dashboard utilizando o localstorage e manipulação do DOM-->
                                 <p class="text-body mb-3"><span id="descricaoPrevia"></span></p>
@@ -209,14 +211,43 @@
             const subCategoria1 = localStorage.getItem("subCategoria1");
             const subCategoria2 = localStorage.getItem("subCategoria2");
             const descricaoPrevia = localStorage.getItem("descricaoPrevia");
-            //Exibe os dados na página
-            document.getElementById("elementoTitulo").textContent = titulo;
-            document.getElementById("categoriaPrincipal").textContent = categoriaPrincipal;
-            document.getElementById("subCategoria1").textContent = subCategoria1;
-            document.getElementById("subCategoria2").textContent = subCategoria2;
+        
 
-            document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
+            // Verifica se a chave do localStorage está vazia
+           if (!titulo) {
+            const tituloPadrao = "Undon Culinaria Japonesa";
+                document.getElementById("elementoTitulo").textContent = tituloPadrao;
+            } 
+            
+            if (!categoriaPrincipal) {
+                const categoriaPrincipalPadrao = "Delivery"
+                document.getElementById("categoriaPrincipal").textContent = categoriaPrincipalPadrao;
+              
+            } 
+            
+            if (!subCategoria1) {
+                const subCategoria1Padrao = "Restaurante";
+                document.getElementById("subCategoria1").textContent = subCategoria1Padrao;
+            }
+            
+            if (!subCategoria2) {
+                const subCategoria2Padrao = "Ambiente sofisticado"
+                document.getElementById("subCategoria2").textContent = subCategoria2Padrao;
+            }
+            if (!descricaoPrevia) {
+                const descricaoPreviaPadrao = "Trouxemos para Belo Horizonte um cardápio de vanguarda, com uma cozinha fusion, misturando sabores, culturas e técnicas, com decoração arrojada. Mais que um japonês, o Udon é uma experiência única!";
+                document.getElementById("descricaoPrevia").textContent = descricaoPreviaPadrao;
+            } else {
+                // Exibe os dados na página
+                  document.getElementById("elementoTitulo").textContent = titulo;
+                  document.getElementById("categoriaPrincipal").textContent = categoriaPrincipal;
+                  document.getElementById("subCategoria1").textContent = subCategoria1;
+                  document.getElementById("subCategoria2").textContent = subCategoria2;
+                  document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
 
+            }  
+           
+            
             // Verifica se há uma imagem carregada no localStorage e a exibe se existir
         const uploadedImage = localStorage.getItem('uploadedImage');
         if (uploadedImage) {
