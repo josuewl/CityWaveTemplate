@@ -112,31 +112,31 @@
                         <!--Banner 1-->
                         <div class="carousel-item active">
                             <div class="imagemBanner1">
-                            <img class="imagemBanner1" class="w-100 h-100" src="../img/palceholderCW.png" alt="Image">
+                            <img class="imagemBanner1" class="w-100 h-100" src="../img/imagemUdon1.svg" alt="Image">
                             </div>
                         </div>
                         <!--Banner 2-->
                         <div class="carousel-item">
                             <div class="imagemBanner2">
-                                <img class="imagemBanner2" class="w-100 h-100" src="../img/palceholderCW.png" alt="Image">
+                                <img class="imagemBanner2" class="w-100 h-100" src="../img/imagemUndon2.svg" alt="Image">
                             </div>
                         </div>
                         <!--Banner 3-->
                         <div class="carousel-item">
                             <div class="imagemBanner3">
-                                <img class="imagemBanner3" class="w-100 h-100" src="../img/palceholderCW.png" alt="Image">
+                                <img class="imagemBanner3" class="w-100 h-100" src="../img/imagemUdon3.svg" alt="Image">
                             </div>
                         </div>
                         <!--Banner 4-->
                         <div class="carousel-item">
                         <div class="imagemBanner4">
-                               <img class="imagemBanner4" class="w-100 h-100" src="../img/palceholderCW.png" alt="Image">
+                               <img class="imagemBanner4" class="w-100 h-100" src="../img/imagemUdon4.svg" alt="Image">
                         </div>
                         </div>
                         <!--Banner 5-->
                         <div class="carousel-item">
                             <div class="imagemBanner5">
-                                   <img class="imagemBanner5" class="w-100 h-100" src="../img/palceholderCW.png" alt="Image">
+                                   <img class="imagemBanner5" class="w-100 h-100" src="../img/imagemUdon5.svg" alt="Image">
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
 
             <div class="col-lg-7 h-auto mb-30">
                 <div class="h-100 bg-light p-30">
-                    <h3 id="titulo"></h3>
+                    <h3 id="elementoTitulo"></h3>
                     <div class="d-flex mb-3">
                         <div class="text-primary mr-2">
                             <small class="fas fa-star"></small>
@@ -229,14 +229,51 @@
         const telefoneEstabelecimento = localStorage.getItem("telefoneEstabelecimento");
         const descricaoEstabelecimento = localStorage.getItem("descricaoEstabelecimento");
         //Exibe os dados na página
-        document.getElementById("titulo").textContent = titulo;
-        document.getElementById("subTitulo").textContent = subTitulo;
-        document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
-        document.getElementById("enderecoEstabelecimento").textContent = enderecoEstabelecimento;
         document.getElementById("telefoneEstabelecimento").textContent = telefoneEstabelecimento;
         document.getElementById("descricaoEstabelecimento").textContent = descricaoEstabelecimento;
         
+    
+            // Verifica se a chave do localStorage está vazia
+            if (!titulo) {
+            const tituloPadrao = "Undon Culinaria Japonesa";
+                document.getElementById("elementoTitulo").textContent = tituloPadrao;
+            } 
+            
+            if (!subTitulo) {
+                const subTituloPadrao = "O melhor japonês de Belo Horizonte."
+                document.getElementById("subTitulo").textContent = subTituloPadrao;
+              
+            } 
+            
+            if (!descricaoPrevia) {
+                const descricaoPreviaPadrao = "Trouxemos para Belo Horizonte um cardápio de vanguarda, com uma cozinha fusion, misturando sabores, culturas e técnicas, com decoração arrojada. Mais que um japonês, o Udon é uma experiência única!";
+                document.getElementById("descricaoPrevia").textContent = descricaoPreviaPadrao;
+            }
+            
+            if (!enderecoEstabelecimento) {
+                const enderecoEstabelecimentoPadrao = "Belvedere - Estrada para Nova Lima, 421";
+                document.getElementById("enderecoEstabelecimento").textContent = enderecoEstabelecimentoPadrao;
+            }
+            if (!telefoneEstabelecimento) {
+                const telefoneEstabelecimentoPadrao = "(31) 3324-2046 (31) 3324-0052";
+                document.getElementById("telefoneEstabelecimento").textContent = telefoneEstabelecimentoPadrao;
+            } 
+
+            if (!descricaoEstabelecimento) {
+                const descricaoEstabelecimentoPadrao = "Em um ambiente sofisticado, nós apresentamos o Udon como um espaço que concilia da tradicional à moderna cozinha nipônica. Nosso restaurante foi inaugurado em 2008 e atualmente é uma das principais referências da Culinária Japonesa em Belo Horizonte. A cozinha, comandada pelo chef Marcelo San, prepara uma grande variedade de pratos, com entradas, combinados, temakis, ceviches especiais, variedades de Yakisoba, Teppanyaki e também grelhados feitos na Robata.";
+                document.getElementById("descricaoEstabelecimento").textContent = descricaoEstabelecimentoPadrao;
+            } else {
+                // Exibe os dados na página
+                  document.getElementById("elementoTitulo").textContent = titulo;
+                  document.getElementById("subTitulo").textContent = subTitulo;
+                  document.getElementById("descricaoPrevia").textContent = descricaoPrevia;
+                  document.getElementById("enderecoEstabelecimento").textContent = enderecoEstabelecimento;
+                  document.getElementById("telefoneEstabelecimento").textContent = telefoneEstabelecimento;
+                  document.getElementById("descricaoEstabelecimento").textContent = descricaoEstabelecimento;
         
+
+            }  
+
         //Imagem Banner 1
         // Verifica se há uma imagem carregada no localStorage e a exibe se existir
         const uploadimagemBanner1 = localStorage.getItem('uploadimagemBanner1');
